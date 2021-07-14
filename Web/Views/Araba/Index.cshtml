@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ArabaDTO>
+@{ Layout = "_MasterLayout"; ViewBag.Title = "Test";}
+
+<div class="row justify-content-center align-content-center mt-3">
+    <h2>Araba Listesi</h2>
+</div>
+<div class="row align-content-end">
+    <a href="/Araba/Ekle/" class="btn btn-success">Yeni Ekle</a>
+</div>
+<div class="row">
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th width="80">Resim</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Şanzıman</th>
+                <th>Vites</th>
+                <th>Yakıt</th>
+                <th>Fiyat</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@r.ArabaId</td>
+                    <td>
+                        <img src="~/uploads/@r.Resim"
+                         style="width:100%; max-height:100px;" 
+                         asp-append-version="true" />
+                    </td>
+                    <td>@r.Marka</td>
+                    <td>@r.Model</td>
+                    <td>@r.Sanziman</td>
+                    <td>@r.Vites</td>
+                    <td>@r.Yakit</td>
+                    <td>@r.Fiyat</td>
+                    <td >
+                        <a href="/ARABA/Delete/@r.ArabaId" class="btn btn-sm btn-danger">Sil</a>
+                        <a href="/ARABA/Get/@r.ArabaId" class="btn btn-sm btn-primary">Güncelle</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

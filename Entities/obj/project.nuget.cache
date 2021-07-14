@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "0eenO2LXZJygYleM9QV9+LuJC6r4tG8CMTaIapMd9Hmibi1V6JqC9QDXxL1iAW+/ENWqjeKi/F/6ninDdKujPw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\interlink23\\source\\repos\\FinalProject\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\interlink23\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.8\\microsoft.aspnetcore.http.features.5.0.8.nupkg.sha512",
+    "C:\\Users\\interlink23\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\interlink23\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\interlink23\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

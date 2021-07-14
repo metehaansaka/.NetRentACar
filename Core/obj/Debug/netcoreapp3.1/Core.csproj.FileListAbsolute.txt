@@ -1,0 +1,12 @@
+C:\Users\interlink23\source\repos\FinalProject\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\interlink23\source\repos\FinalProject\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\interlink23\source\repos\FinalProject\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\interlink23\source\repos\FinalProject\Core\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\interlink23\source\repos\FinalProject\Core\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.AssemblyReference.cache
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.csproj.CopyComplete
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\interlink23\source\repos\FinalProject\Core\obj\Debug\netcoreapp3.1\Core.pdb

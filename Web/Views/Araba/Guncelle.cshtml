@@ -1,0 +1,67 @@
+﻿@using Web.Models
+@model Tuple<Araba, Marka, Model>
+@{ Layout = "_MasterLayout"; ViewBag.Title = "Test";}
+@using (Html.BeginForm("Guncelle", "Araba", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <input type="hidden" name="ArabaId" value="@Model.Item1.ArabaId" />
+        <div class="row">
+            <div class="col-md-6">
+                <label for="markaId">Marka</label>
+                @Html.DropDownList("MarkaId", (SelectList)ViewData["Marka"], new { @class = "form-control" })
+            </div>
+            <div class="col-md-6">
+                <label for="modelId">Model</label>
+                @Html.DropDownList("ModelId", (SelectList)ViewData["Model"], new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="sanziman">Şanzıman</label>
+                <input type="text" name="sanziman" id="sanziman" class="form-control" value="@Model.Item1.Sanziman" />
+            </div>
+            <div class="col-md-6">
+                <label for="yakit">Yakıt</label>
+                <input type="text" name="yakit" id="yakit" class="form-control" value="@Model.Item1.Yakit" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="vites">Vites</label>
+                <input type="text" name="vites" id="vites" class="form-control" value="@Model.Item1.Vites" />
+            </div>
+            <div class="col-md-6">
+                <label for="fiyat">Fiyat</label>
+                <input type="text" name="fiyat" id="fiyat" class="form-control" value="@Model.Item1.Fiyat" />
+            </div>
+        </div>
+        <div class="row mt-3">
+                <div class="col-md-2">
+                    <img src="~/uploads/@Model.Item1.Resim"
+                         style="width:100%; max-height:100px;"
+                         asp-append-version="true" />
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="file" class="control-label"></label>
+                        <div class="custom-file">
+                            <input type="file" name="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Resim Seç</label>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <button class="btn btn-info mt-3">Güncelle</button>
+    </div>
+}
+
+@section scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}  

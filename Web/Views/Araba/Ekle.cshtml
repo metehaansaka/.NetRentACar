@@ -1,0 +1,59 @@
+﻿@using Web.Models
+
+@model Tuple<Marka, Model>
+
+@{ Layout = "_MasterLayout"; ViewBag.Title = "Test";}
+
+<form method="post" class="form-group" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="markaId">Marka</label>
+            @Html.DropDownList("MarkaId", (SelectList)ViewBag.dgr, new { @class = "form-control" })
+        </div>
+        <div class="col-md-6">
+            <label for="modelId">Model</label>
+            @Html.DropDownList("ModelId", (SelectList)ViewBag.dgr2, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="sanziman">Şanzıman</label>
+            <input type="text" name="sanziman" id="sanziman" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="yakit">Yakıt</label>
+            <input type="text" name="yakit" id="yakit" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="vites">Vites</label>
+            <input type="text" name="vites" id="vites" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="fiyat">Fiyat</label>
+            <input type="text" name="fiyat" id="fiyat" class="form-control" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="file" class="control-label"></label>
+            <div class="custom-file">
+                <input type="file" name="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Resim Seç</label>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success mt-5">Ekle</button>
+</form>
+
+@section scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}  
